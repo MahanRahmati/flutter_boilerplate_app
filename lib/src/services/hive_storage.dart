@@ -11,28 +11,10 @@ class HiveStorage {
     _box = await Hive.openBox('storage');
   }
 
-  // ignore: unused_element
-  Future<void> _clear() async {
-    await _box.clear();
-  }
-
-  // ignore: unused_element
-  Future<void> _delete(final String key) async {
-    await _box.delete(key);
-  }
-
-  dynamic _get(final String key) async {
-    await _box.get(key);
-  }
-
-  Future<void> _put(final String key, final dynamic value) async {
-    await _box.put(key, value);
-  }
-
   /// Theme mode
   static const String _themeModeKey = 'themeMode';
-  bool? get themeMode => _get(_themeModeKey) as bool?;
+  bool? get themeMode => _box.get(_themeModeKey) as bool?;
   Future<void> setThemeMode({final bool? themeMode}) async {
-    await _put(_themeModeKey, themeMode);
+    await _box.put(_themeModeKey, themeMode);
   }
 }
