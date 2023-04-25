@@ -25,6 +25,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
+  arna_logger:
+    dependency: "direct main"
+    description:
+      name: arna_logger
+      sha256: "50582636223b644e086a6708841c15d16f29ded0e25d7c9e346315908f1efbeb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.7"
   async:
     dependency: transitive
     description:

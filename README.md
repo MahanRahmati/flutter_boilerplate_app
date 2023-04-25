@@ -7,3 +7,4 @@
 | [hive](https://pub.dev/packages/hive/)                                 | Storage                               |
 | [safe_change_notifier](https://pub.dev/packages/safe_change_notifier/) | Replacements for ChangeNotifier       |
 | [intl](https://pub.dev/packages/intl/)                                 | Internationalization and Localization |
+| [arna_logger](https://pub.dev/packages/arna_logger/)                   | Logger                                |
