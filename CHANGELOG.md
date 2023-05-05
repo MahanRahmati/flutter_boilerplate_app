@@ -1,3 +1,7 @@
+## 1.2.0
+
+- Add flutter_native_splash
+
 ## 1.1.0
 
 - Add text styles

@@ -5,10 +5,13 @@ import 'package:flutter/material.dart';
 
 import '/src/app.dart';
 import '/src/services/hive_storage.dart';
+import '/src/services/native_splash.dart';
 import '/src/services/orientations.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  final WidgetsBinding widgetsBinding =
+      WidgetsFlutterBinding.ensureInitialized();
+  await NativeSplash.instance.init(widgetsBinding);
   Orientations.setPreferredOrientations();
   await HiveStorage.instance.init();
   return runZonedGuarded(() async {
