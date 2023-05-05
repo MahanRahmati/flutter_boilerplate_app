@@ -46,6 +46,12 @@ The project structure is organized into several directories:
 - freezed: To run the code generator, execute the following command: `flutter pub run build_runner build`
 - flutter_native_splash: To create splash, execute the following command: `flutter pub run flutter_native_splash:create`
 
+## TODO
+
+- [ ] [arna_web_service](https://pub.dev/packages/arna_web_service)
+- [ ] [arna_response_validation](https://pub.dev/packages/arna_response_validation)
+- [ ] [easy_localization](https://pub.dev/packages/easy_localization)
+
 ## License
 
 This boilerplate is [BSD 3-Clause licensed](./LICENSE).
