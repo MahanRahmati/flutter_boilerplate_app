@@ -5,7 +5,7 @@ class DummyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(final BuildContext context) {
-    return const SizedBox.shrink();
+    return AppBar();
   }
 
   @override
