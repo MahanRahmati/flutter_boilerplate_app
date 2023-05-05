@@ -26,6 +26,8 @@ This boilerplate includes several common dependencies that you may find useful w
 | [safe_change_notifier](https://pub.dev/packages/safe_change_notifier/) | Replacements for ChangeNotifier       |
 | [intl](https://pub.dev/packages/intl/)                                 | Internationalization and Localization |
 | [arna_logger](https://pub.dev/packages/arna_logger/)                   | Logger                                |
+| [flutter_svg](https://pub.dev/packages/flutter_svg/)                   | Draw SVG files                        |
+| [cached_network_image](https://pub.dev/packages/cached_network_image/) | Load and cache network images         |
 
 You can add or remove dependencies as needed for your specific use case.
 
