@@ -2,6 +2,7 @@
 
 - Add arna_web_service
 - Add arna_response_validation
+- Update to dart 3
 
 ## 1.2.0
 
