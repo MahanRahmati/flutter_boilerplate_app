@@ -45,8 +45,8 @@ The project structure is organized into several directories:
 
 ## Special
 
-- freezed: To run the code generator, execute the following command: `flutter pub run build_runner build`
-- flutter_native_splash: To create splash, execute the following command: `flutter pub run flutter_native_splash:create`
+- freezed: To run the code generator, execute the following command: `dart run build_runner build`
+- flutter_native_splash: To create splash, execute the following command: `dart run flutter_native_splash:create`
 
 ## TODO
 
