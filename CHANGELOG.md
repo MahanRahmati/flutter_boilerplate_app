@@ -1,3 +1,8 @@
+## 1.3.0
+
+- Add arna_web_service
+- Add arna_response_validation
+
 ## 1.2.0
 
 - Add flutter_native_splash

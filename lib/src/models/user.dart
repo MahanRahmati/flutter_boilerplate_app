@@ -6,11 +6,10 @@ part 'user.g.dart';
 @freezed
 class User with _$User {
   const factory User({
-    final String? user,
+    final String? username,
     final String? password,
   }) = _User;
 
-  factory User.fromJson(final Map<String, dynamic> json) {
-    return _$UserFromJson(json);
-  }
+  factory User.fromJson(final Map<String, dynamic> json) =>
+      _$UserFromJson(json);
 }

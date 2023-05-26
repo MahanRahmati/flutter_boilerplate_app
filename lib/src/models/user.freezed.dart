@@ -20,7 +20,7 @@ User _$UserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$User {
-  String? get user => throw _privateConstructorUsedError;
+  String? get username => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -33,7 +33,7 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res, User>;
   @useResult
-  $Res call({String? user, String? password});
+  $Res call({String? username, String? password});
 }
 
 /// @nodoc
@@ -49,13 +49,13 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? user = freezed,
+    Object? username = freezed,
     Object? password = freezed,
   }) {
     return _then(_value.copyWith(
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
+      username: freezed == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String?,
       password: freezed == password
           ? _value.password
@@ -71,7 +71,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$$_UserCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? user, String? password});
+  $Res call({String? username, String? password});
 }
 
 /// @nodoc
@@ -83,13 +83,13 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? user = freezed,
+    Object? username = freezed,
     Object? password = freezed,
   }) {
     return _then(_$_User(
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
+      username: freezed == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
               as String?,
       password: freezed == password
           ? _value.password
@@ -102,18 +102,18 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
 /// @nodoc
 @JsonSerializable()
 class _$_User implements _User {
-  const _$_User({this.user, this.password});
+  const _$_User({this.username, this.password});
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
   @override
-  final String? user;
+  final String? username;
   @override
   final String? password;
 
   @override
   String toString() {
-    return 'User(user: $user, password: $password)';
+    return 'User(username: $username, password: $password)';
   }
 
   @override
@@ -121,14 +121,15 @@ class _$_User implements _User {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_User &&
-            (identical(other.user, user) || other.user == user) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
             (identical(other.password, password) ||
                 other.password == password));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, user, password);
+  int get hashCode => Object.hash(runtimeType, username, password);
 
   @JsonKey(ignore: true)
   @override
@@ -145,12 +146,13 @@ class _$_User implements _User {
 }
 
 abstract class _User implements User {
-  const factory _User({final String? user, final String? password}) = _$_User;
+  const factory _User({final String? username, final String? password}) =
+      _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
-  String? get user;
+  String? get username;
   @override
   String? get password;
   @override
