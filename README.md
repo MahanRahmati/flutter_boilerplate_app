@@ -33,6 +33,7 @@ This boilerplate includes several common dependencies that you may find useful w
 | [flutter_native_splash](https://pub.dev/packages/flutter_native_splash/)      | Native splash screen                            |
 | [arna_web_service](https://pub.dev/packages/arna_web_service)                 | Web service                                     |
 | [arna_response_validation](https://pub.dev/packages/arna_response_validation) | Response validator                              |
+| [easy_localization](https://pub.dev/packages/easy_localization)               | Localization                                    |
 
 You can add or remove dependencies as needed for your specific use case.
 
@@ -55,7 +56,7 @@ To create splash, execute the following command: `dart run flutter_native_splash
 
 ## TODO
 
-- [ ] [easy_localization](https://pub.dev/packages/easy_localization)
+- Nothing for now!
 
 ## License
 
