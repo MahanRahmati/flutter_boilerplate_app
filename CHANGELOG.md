@@ -1,3 +1,7 @@
+## 1.4.0
+
+- Add easy_localization
+
 ## 1.3.0
 
 - Add arna_web_service
