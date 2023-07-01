@@ -1,3 +1,11 @@
+## 1.5.0
+
+- Bump environment
+- Bump go_router
+- Bump flutter_svg
+- Bump build_runner
+- Bump json_serializable
+
 ## 1.4.0
 
 - Add easy_localization
