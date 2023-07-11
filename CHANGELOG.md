@@ -1,3 +1,10 @@
+## 1.6.0
+
+- Remove easy_localization
+- Update AppCachedNetworkImage
+- Update Dimens
+- Bump dependencies
+
 ## 1.5.0
 
 - Bump environment

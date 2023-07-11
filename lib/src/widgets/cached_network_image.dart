@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
+import '/src/constants/dimens.dart';
+
 class AppCachedNetworkImage extends StatelessWidget {
   const AppCachedNetworkImage({
     super.key,
@@ -9,6 +11,7 @@ class AppCachedNetworkImage extends StatelessWidget {
     this.borderRadius,
     this.width,
     this.height,
+    this.progressIndicatorSize,
   });
 
   final String imageUrl;
@@ -16,11 +19,12 @@ class AppCachedNetworkImage extends StatelessWidget {
   final BorderRadius? borderRadius;
   final double? width;
   final double? height;
+  final double? progressIndicatorSize;
 
   @override
   Widget build(final BuildContext context) {
     return ClipRRect(
-      borderRadius: borderRadius ?? BorderRadius.circular(8),
+      borderRadius: borderRadius ?? BorderRadius.circular(Dimens.borderRadius),
       child: CachedNetworkImage(
         imageUrl: imageUrl,
         width: width,
@@ -32,8 +36,11 @@ class AppCachedNetworkImage extends StatelessWidget {
           final DownloadProgress downloadProgress,
         ) {
           return Center(
-            child: CircularProgressIndicator(
-              value: downloadProgress.progress,
+            child: SizedBox.square(
+              dimension: progressIndicatorSize,
+              child: CircularProgressIndicator(
+                value: downloadProgress.progress,
+              ),
             ),
           );
         },
