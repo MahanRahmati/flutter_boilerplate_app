@@ -1,3 +1,12 @@
+## 1.7.0
+
+- Bump dependencies
+- Update Dimens
+- Update Themes
+- Update Typography
+- Add Enum
+- Update Apis
+
 ## 1.6.0
 
 - Remove easy_localization

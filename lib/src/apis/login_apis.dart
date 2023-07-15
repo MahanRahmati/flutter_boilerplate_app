@@ -1,7 +1,4 @@
-import 'dart:convert' show jsonDecode;
-
 import 'package:arna_logger/arna_logger.dart';
-import 'package:arna_response_validation/arna_response_validation.dart';
 import 'package:arna_web_service/arna_web_service.dart';
 
 import '/src/constants/endpoints.dart';
@@ -26,7 +23,7 @@ class LoginAPIController extends ArnaWebServiceController {
         },
       );
 
-      final dynamic body = ArnaResponseValidation().getUTF8Body(response);
+      final dynamic body = ResponseUtils().getUTF8Body(response);
 
       if (body is! String) {
         throw Exception('Body is not string! Body:$body');
@@ -43,6 +40,44 @@ class LoginAPIController extends ArnaWebServiceController {
       return User.fromJson(rawData);
     } catch (e) {
       arnaLogger(title: 'Login', data: e);
+      errorHandler(e);
+    }
+    return null;
+  }
+
+  Future<List<User>?> getUsers({
+    required final void Function(dynamic e) errorHandler,
+  }) async {
+    try {
+      final Response? response = await webService.get(
+        Uri.parse(Endpoints.login),
+      );
+
+      final dynamic body = ResponseUtils().getUTF8Body(response);
+
+      if (body is! String) {
+        throw Exception('Body is not string! Body:$body');
+      }
+
+      final dynamic rawData = jsonDecode(body);
+
+      if (rawData is! List<dynamic>) {
+        throw Exception(
+          'rawData is not List<dynamic>! rawData:$rawData',
+        );
+      }
+
+      final List<User> items = <User>[];
+      for (final dynamic item in rawData) {
+        if (item is Map<String, dynamic>) {
+          final User user = User.fromJson(item);
+          items.add(user);
+        }
+      }
+
+      return items;
+    } catch (e) {
+      arnaLogger(title: 'getUsers', data: e);
       errorHandler(e);
     }
     return null;
