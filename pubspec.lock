@@ -37,18 +37,18 @@ packages:
     dependency: "direct main"
     description:
       name: arna_logger
-      sha256: "50582636223b644e086a6708841c15d16f29ded0e25d7c9e346315908f1efbeb"
+      sha256: bd8ba1c6520852844193684e2c0f9d9c2905eb552770700d8dc55fd79845558a
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.7"
+    version: "1.1.0"
   arna_web_service:
     dependency: "direct main"
     description:
       name: arna_web_service
-      sha256: "17a35c1e3fb9b6c29b5df07b18b33f9beb348418aa71599228104991f80231c3"
+      sha256: eadf4caefc01444d6ad843e245245d54fa1d629a81b8f93fc1f1f0a0d45f4936
       url: "https://pub.dev"
     source: hosted
-    version: "1.7.0"
+    version: "1.8.0"
   async:
     dependency: transitive
     description:
