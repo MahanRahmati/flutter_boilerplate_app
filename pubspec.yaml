@@ -13,7 +13,7 @@ dependencies:
 
   # State Manager
   provider: ^6.0.5
-  safe_change_notifier: ^0.3.0
+  safe_change_notifier: ^0.3.1
 
   # Routing
   go_router: ^9.0.3

@@ -1,3 +1,7 @@
+## 1.9.0
+
+- Bump dependencies
+
 ## 1.8.0
 
 - Bump dependencies
