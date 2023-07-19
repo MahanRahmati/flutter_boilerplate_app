@@ -1,6 +1,7 @@
 ## 1.8.0
 
 - Bump dependencies
+- Add flutter_localizations
 
 ## 1.7.0
 
