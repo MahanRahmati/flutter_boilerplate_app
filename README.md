@@ -52,10 +52,6 @@ To run the code generator, execute the following command: `dart run build_runner
 
 To create splash, execute the following command: `dart run flutter_native_splash:create`
 
-## TODO
-
-- [ ] Localization
-
 ## License
 
 This boilerplate is [BSD 3-Clause licensed](./LICENSE).
