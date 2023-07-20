@@ -32,6 +32,7 @@ This boilerplate includes several common dependencies that you may find useful w
 | [json_serializable](https://pub.dev/packages/json_serializable/)         | Code generation for converting to and from JSON |
 | [flutter_native_splash](https://pub.dev/packages/flutter_native_splash/) | Native splash screen                            |
 | [arna_web_service](https://pub.dev/packages/arna_web_service)            | Web service                                     |
+| [get_it](https://pub.dev/packages/get_it)                                | Dependency injection                            |
 
 You can add or remove dependencies as needed for your specific use case.
 

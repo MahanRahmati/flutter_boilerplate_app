@@ -1,6 +1,7 @@
 ## 1.9.0
 
 - Bump dependencies
+- Add get_it
 
 ## 1.8.0
 
