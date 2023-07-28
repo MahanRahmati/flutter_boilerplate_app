@@ -2,7 +2,6 @@
 
 - Bump dependencies
 - Add get_it
-- Add Drift
 
 ## 1.8.0
 
