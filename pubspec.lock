@@ -316,7 +316,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_native_splash:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_native_splash
       sha256: ecff62b3b893f2f665de7e4ad3de89f738941fcfcaaba8ee601e749efafa4698
@@ -725,6 +725,20 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.1"
+  service_native_splash:
+    dependency: "direct main"
+    description:
+      path: "packages/service_native_splash"
+      relative: true
+    source: path
+    version: "1.0.0+1"
+  service_orientations:
+    dependency: "direct main"
+    description:
+      path: "packages/service_orientations"
+      relative: true
+    source: path
+    version: "1.0.0+1"
   shelf:
     dependency: transitive
     description:

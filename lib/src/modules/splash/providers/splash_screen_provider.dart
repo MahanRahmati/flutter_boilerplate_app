@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
+import 'package:service_native_splash/service_native_splash.dart';
 
 import '/src/routes/route_path.dart';
-import '/src/services/native_splash.dart';
 
 class SplashScreenProvider extends SafeChangeNotifier {
   SplashScreenProvider(this.context) {

@@ -40,9 +40,6 @@ dependencies:
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
 
-  # Native splash screen
-  flutter_native_splash: ^2.3.2
-
   # Web service
   arna_web_service: ^1.8.0
 
@@ -52,6 +49,12 @@ dependencies:
   # Path provider
   path_provider: ^2.1.1
   path: ^1.8.3
+
+  service_native_splash:
+    path: packages/service_native_splash
+
+  service_orientations:
+    path: packages/service_orientations
 
 dev_dependencies:
   flutter_test:
