@@ -1,5 +1,6 @@
 import 'dart:async' show runZonedGuarded;
 
+import 'package:app_localizations/app_localizations.dart';
 import 'package:arna_logger/arna_logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,7 +17,8 @@ Future<void> main() async {
     await NativeSplash.instance.init(widgetsBinding);
     Orientations.setPreferredOrientations();
     await HiveStorageService.initialize();
-    runApp(const ProviderScope(child: App()));
+    LocaleSettings.useDeviceLocale();
+    runApp(ProviderScope(child: TranslationProvider(child: const App())));
   }, (final Object error, final StackTrace stack) {
     arnaLogger(title: 'Run Stack', data: stack);
     arnaLogger(title: 'Run Error', data: error);
