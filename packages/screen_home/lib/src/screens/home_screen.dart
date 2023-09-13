@@ -1,3 +1,4 @@
+import 'package:app_providers/app_providers.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -21,10 +22,39 @@ class _HomeScreen extends StatelessWidget {
   @override
   Widget build(final BuildContext context) {
     final HomeScreenProvider watch = context.watch<HomeScreenProvider>();
+    final ThemeModeProvider themeModeWatch = context.watch<ThemeModeProvider>();
+    final ThemeModeProvider themeModeRead = context.read<ThemeModeProvider>();
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text(watch.title)),
-      body: Container(),
+      body: ListView(
+        children: <Widget>[
+          RadioListTile<ThemeMode>(
+            value: ThemeMode.system,
+            groupValue: themeModeWatch.selectedThemeMode,
+            title: const Text('System'),
+            onChanged: (final _) {
+              themeModeRead.setThemeMode(ThemeMode.system);
+            },
+          ),
+          RadioListTile<ThemeMode>(
+            value: ThemeMode.dark,
+            groupValue: themeModeWatch.selectedThemeMode,
+            title: const Text('Dark'),
+            onChanged: (final _) {
+              themeModeRead.setThemeMode(ThemeMode.dark);
+            },
+          ),
+          RadioListTile<ThemeMode>(
+            value: ThemeMode.light,
+            groupValue: themeModeWatch.selectedThemeMode,
+            title: const Text('Light'),
+            onChanged: (final _) {
+              themeModeRead.setThemeMode(ThemeMode.light);
+            },
+          ),
+        ],
+      ),
     );
   }
 }

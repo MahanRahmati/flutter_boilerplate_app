@@ -18,6 +18,9 @@ dependencies:
   app_localizations:
     path: ../app_localizations
 
+  app_providers:
+    path: ../app_providers
+
   app_router:
     path: ../app_router
 

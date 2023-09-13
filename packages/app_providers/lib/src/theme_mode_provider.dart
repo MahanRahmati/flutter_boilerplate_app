@@ -6,7 +6,8 @@ class ThemeModeProvider extends SafeChangeNotifier {
   ThemeModeProvider() {
     init();
   }
-  ThemeMode selectedThemeMode = ThemeMode.system;
+  ThemeMode _selectedThemeMode = ThemeMode.system;
+  ThemeMode get selectedThemeMode => _selectedThemeMode;
 
   static const String _storageName = 'theme';
   static const String _storageKey = 'themeKey';
@@ -18,20 +19,20 @@ class ThemeModeProvider extends SafeChangeNotifier {
     );
     switch (themeMode) {
       case true:
-        selectedThemeMode = ThemeMode.dark;
+        _selectedThemeMode = ThemeMode.dark;
         break;
       case false:
-        selectedThemeMode = ThemeMode.light;
+        _selectedThemeMode = ThemeMode.light;
         break;
       case null:
-        selectedThemeMode = ThemeMode.system;
+        _selectedThemeMode = ThemeMode.system;
         break;
     }
     notifyListeners();
   }
 
   Future<void> setThemeMode(final ThemeMode themeMode) async {
-    selectedThemeMode = themeMode;
+    _selectedThemeMode = themeMode;
     final bool? value;
     switch (themeMode) {
       case ThemeMode.dark:
