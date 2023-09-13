@@ -1,64 +1,40 @@
+import 'package:app_localizations/app_localizations.dart';
 import 'package:app_providers/app_providers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart'
-    hide ChangeNotifierProvider;
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../providers/home_screen_provider.dart';
-
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
-  @override
-  Widget build(final BuildContext context) {
-    return ChangeNotifierProvider<HomeScreenProvider>(
-      create: (final _) => HomeScreenProvider(context),
-      child: const _HomeScreen(),
-    );
+  void changeThemeMode(final WidgetRef ref, final ThemeMode mode) {
+    ref.read(appThemeModeProvider.notifier).setThemeMode(mode);
   }
-}
-
-class _HomeScreen extends ConsumerWidget {
-  const _HomeScreen();
 
   @override
   Widget build(final BuildContext context, final WidgetRef ref) {
-    final HomeScreenProvider watch = context.watch<HomeScreenProvider>();
     final AsyncValue<ThemeMode> themeMode = ref.watch(appThemeModeProvider);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: Text(watch.title)),
+      appBar: AppBar(title: Text(t.hello(name: 'user'))),
       body: ListView(
         children: <Widget>[
           RadioListTile<ThemeMode>(
             value: ThemeMode.system,
             groupValue: themeMode.value,
             title: const Text('System'),
-            onChanged: (final _) {
-              ref
-                  .read(appThemeModeProvider.notifier)
-                  .setThemeMode(ThemeMode.system);
-            },
+            onChanged: (final _) => changeThemeMode(ref, ThemeMode.system),
           ),
           RadioListTile<ThemeMode>(
             value: ThemeMode.dark,
             groupValue: themeMode.value,
             title: const Text('Dark'),
-            onChanged: (final _) {
-              ref
-                  .read(appThemeModeProvider.notifier)
-                  .setThemeMode(ThemeMode.dark);
-            },
+            onChanged: (final _) => changeThemeMode(ref, ThemeMode.dark),
           ),
           RadioListTile<ThemeMode>(
             value: ThemeMode.light,
             groupValue: themeMode.value,
             title: const Text('Light'),
-            onChanged: (final _) {
-              ref
-                  .read(appThemeModeProvider.notifier)
-                  .setThemeMode(ThemeMode.light);
-            },
+            onChanged: (final _) => changeThemeMode(ref, ThemeMode.light),
           ),
         ],
       ),
