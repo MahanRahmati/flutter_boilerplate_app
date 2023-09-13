@@ -1,3 +1,7 @@
+## 2.1.0
+
+- Add riverpod
+
 ## 2.0.0
 
 - Bump dependencies

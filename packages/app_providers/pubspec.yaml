@@ -11,8 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  provider: ^6.0.5
-  safe_change_notifier: ^0.3.1
+  flutter_riverpod: ^2.4.0
+  riverpod_annotation: ^2.1.5
 
   service_storage:
     path: ../service_storage
@@ -21,3 +21,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.3
+  riverpod_generator: ^2.3.2
+  build_runner: ^2.4.6
+  custom_lint: ^0.5.3
+  riverpod_lint: ^2.0.4

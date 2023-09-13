@@ -30,6 +30,8 @@ analyzer:
     - 'dev/conductor/lib/proto/*'
     - '**/*.freezed.dart'
     - '**/*.g.dart'
+  plugins:
+    - custom_lint
 
 linter:
   rules:

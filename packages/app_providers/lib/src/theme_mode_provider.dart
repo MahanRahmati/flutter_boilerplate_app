@@ -1,38 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:safe_change_notifier/safe_change_notifier.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:service_storage/service_storage.dart';
 
-class ThemeModeProvider extends SafeChangeNotifier {
-  ThemeModeProvider() {
-    init();
-  }
-  ThemeMode _selectedThemeMode = ThemeMode.system;
-  ThemeMode get selectedThemeMode => _selectedThemeMode;
+part 'theme_mode_provider.g.dart';
 
+@riverpod
+class AppThemeMode extends _$AppThemeMode {
   static const String _storageName = 'theme';
   static const String _storageKey = 'themeKey';
 
-  Future<void> init() async {
+  @override
+  Future<ThemeMode> build() async {
     final bool? themeMode = await HiveStorageService.instance?.getValue<bool?>(
       _storageKey,
       storageName: _storageName,
     );
     switch (themeMode) {
       case true:
-        _selectedThemeMode = ThemeMode.dark;
-        break;
+        return ThemeMode.dark;
       case false:
-        _selectedThemeMode = ThemeMode.light;
-        break;
+        return ThemeMode.light;
       case null:
-        _selectedThemeMode = ThemeMode.system;
-        break;
+        return ThemeMode.system;
     }
-    notifyListeners();
   }
 
   Future<void> setThemeMode(final ThemeMode themeMode) async {
-    _selectedThemeMode = themeMode;
     final bool? value;
     switch (themeMode) {
       case ThemeMode.dark:
@@ -50,6 +43,6 @@ class ThemeModeProvider extends SafeChangeNotifier {
       value: value,
       storageName: _storageName,
     );
-    notifyListeners();
+    state = AsyncData<ThemeMode>(themeMode);
   }
 }
