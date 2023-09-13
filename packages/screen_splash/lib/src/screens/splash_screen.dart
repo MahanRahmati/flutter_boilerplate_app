@@ -1,26 +1,32 @@
+import 'package:app_router/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:service_native_splash/service_native_splash.dart';
 
-import '../providers/splash_screen_provider.dart';
-
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
-  Widget build(final BuildContext context) {
-    return ChangeNotifierProvider<SplashScreenProvider>(
-      create: (final _) => SplashScreenProvider(context),
-      child: const _SplashScreen(),
-    );
-  }
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreen extends StatelessWidget {
-  const _SplashScreen();
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((final _) {
+      NativeSplash.instance.remove();
+    });
+    _goToHomeScreen();
+  }
+
+  void _goToHomeScreen() {
+    Future<void>.delayed(const Duration(seconds: 1)).then(
+      (final _) => context.pushReplacement(RoutePath.home),
+    );
+  }
 
   @override
   Widget build(final BuildContext context) {
-    context.watch<SplashScreenProvider>();
     return const Scaffold(
       body: Center(
         child: FlutterLogo(),

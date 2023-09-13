@@ -1,6 +1,8 @@
 ## 2.1.0
 
 - Add riverpod
+- Remove provider
+- Remove safe_change_notifier
 
 ## 2.0.0
 
