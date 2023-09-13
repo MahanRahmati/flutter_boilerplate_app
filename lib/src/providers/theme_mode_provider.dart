@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:safe_change_notifier/safe_change_notifier.dart';
-
-import '/src/services/hive_storage.dart';
+import 'package:service_storage/service_storage.dart';
 
 class ThemeModeProvider extends SafeChangeNotifier {
   ThemeModeProvider() {
@@ -9,8 +8,14 @@ class ThemeModeProvider extends SafeChangeNotifier {
   }
   ThemeMode selectedThemeMode = ThemeMode.system;
 
-  void init() {
-    final bool? themeMode = HiveStorage.instance.themeMode;
+  static const String _storageName = 'theme';
+  static const String _storageKey = 'themeKey';
+
+  Future<void> init() async {
+    final bool? themeMode = await HiveStorageService.instance?.getValue<bool?>(
+      _storageKey,
+      storageName: _storageName,
+    );
     switch (themeMode) {
       case true:
         selectedThemeMode = ThemeMode.dark;
@@ -25,19 +30,25 @@ class ThemeModeProvider extends SafeChangeNotifier {
     notifyListeners();
   }
 
-  void setThemeMode(final ThemeMode themeMode) {
+  Future<void> setThemeMode(final ThemeMode themeMode) async {
     selectedThemeMode = themeMode;
+    final bool? value;
     switch (themeMode) {
       case ThemeMode.dark:
-        HiveStorage.instance.setThemeMode(themeMode: true);
+        value = true;
         break;
       case ThemeMode.light:
-        HiveStorage.instance.setThemeMode(themeMode: false);
+        value = false;
         break;
       case ThemeMode.system:
-        HiveStorage.instance.setThemeMode();
+        value = null;
         break;
     }
+    await HiveStorageService.instance?.setValue(
+      key: _storageKey,
+      value: value,
+      storageName: _storageName,
+    );
     notifyListeners();
   }
 }
