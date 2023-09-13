@@ -1,0 +1,29 @@
+name: app_apis
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Logger
+  arna_logger: ^1.1.0
+
+  # Web service
+  arna_web_service: ^1.8.0
+
+  app_constants:
+    path: ../app_constants
+
+  app_models:
+    path: ../app_models
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.3

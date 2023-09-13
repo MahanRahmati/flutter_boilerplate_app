@@ -1,7 +1,8 @@
-## 1.9.0
+## 2.0.0
 
 - Bump dependencies
-- Add get_it
+- New structure
+- Add slang
 
 ## 1.8.0
 

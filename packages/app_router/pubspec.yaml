@@ -1,0 +1,26 @@
+name: app_router
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Routing
+  go_router: ^10.1.2
+
+  screen_splash:
+    path: ../../packages/screen_splash
+
+  screen_home:
+    path: ../../packages/screen_home
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.3

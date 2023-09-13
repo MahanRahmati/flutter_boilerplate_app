@@ -7,7 +7,6 @@ import 'package:service_orientations/service_orientations.dart';
 import 'package:service_storage/service_storage.dart';
 
 import '/src/app.dart';
-import '/src/services/get_it_service.dart';
 
 Future<void> main() async {
   return runZonedGuarded(() async {
@@ -16,7 +15,6 @@ Future<void> main() async {
     await NativeSplash.instance.init(widgetsBinding);
     Orientations.setPreferredOrientations();
     await HiveStorageService.initialize();
-    setupDependencies();
     runApp(const App());
   }, (final Object error, final StackTrace stack) {
     arnaLogger(title: 'Run Stack', data: stack);

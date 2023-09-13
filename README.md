@@ -32,7 +32,7 @@ This boilerplate includes several common dependencies that you may find useful w
 | [json_serializable](https://pub.dev/packages/json_serializable/)         | Code generation for converting to and from JSON |
 | [flutter_native_splash](https://pub.dev/packages/flutter_native_splash/) | Native splash screen                            |
 | [arna_web_service](https://pub.dev/packages/arna_web_service)            | Web service                                     |
-| [get_it](https://pub.dev/packages/get_it)                                | Dependency injection                            |
+| [slang](https://pub.dev/packages/slang)                                  | Internationalization and Localization           |
 
 You can add or remove dependencies as needed for your specific use case.
 
@@ -40,8 +40,8 @@ You can add or remove dependencies as needed for your specific use case.
 
 The project structure is organized into several directories:
 
-    lib: Contains the main source code for your application.
-    assets: Contains any static assets, such as images or fonts, that your application needs.
+    lib: Contains the main part of source code for your application.
+    packages: Contains everything else that your application needs.
 
 ## Special
 
@@ -52,6 +52,10 @@ To run the code generator, execute the following command: `dart run build_runner
 ### flutter_native_splash
 
 To create splash, execute the following command: `dart run flutter_native_splash:create`
+
+### slang
+
+To generate dart files: `dart run slang`
 
 ## License
 

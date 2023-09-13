@@ -1,0 +1,29 @@
+name: app_widgets
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Draw SVG files
+  flutter_svg: ^2.0.7
+
+  # Load and cache network images
+  cached_network_image: ^3.2.3
+
+  app_constants:
+    path: ../app_constants
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.3
+
+flutter:
+  uses-material-design: true

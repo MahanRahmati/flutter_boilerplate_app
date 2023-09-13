@@ -1,12 +1,9 @@
+import 'package:app_constants/app_constants.dart';
+import 'package:app_providers/app_providers.dart';
+import 'package:app_router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
-
-import '/src/constants/strings.dart';
-import '/src/constants/themes.dart';
-import '/src/providers/global_providers.dart';
-import '/src/providers/theme_mode_provider.dart';
-import '/src/routes/routes.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

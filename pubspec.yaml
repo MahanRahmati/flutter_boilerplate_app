@@ -15,9 +15,6 @@ dependencies:
   provider: ^6.0.5
   safe_change_notifier: ^0.3.1
 
-  # Routing
-  go_router: ^10.1.2
-
   # Internationalization and localization
   flutter_localizations:
     sdk: flutter
@@ -26,21 +23,26 @@ dependencies:
   # Logger
   arna_logger: ^1.1.0
 
-  # Draw SVG files
-  flutter_svg: ^2.0.7
+  app_apis:
+    path: packages/app_apis
 
-  # Load and cache network images
-  cached_network_image: ^3.2.3
+  app_constants:
+    path: packages/app_constants
 
-  # Code generation for models
-  freezed_annotation: ^2.4.1
-  json_annotation: ^4.8.1
+  app_localizations:
+    path: packages/app_localizations
 
-  # Web service
-  arna_web_service: ^1.8.0
+  app_models:
+    path: packages/app_models
 
-  # Dependency injection
-  get_it: ^7.6.4
+  app_providers:
+    path: packages/app_providers
+
+  app_router:
+    path: packages/app_router
+
+  app_widgets:
+    path: packages/app_widgets
 
   service_native_splash:
     path: packages/service_native_splash
@@ -63,7 +65,3 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
-
-  assets:
-    - assets/images/
-    - assets/translations/
