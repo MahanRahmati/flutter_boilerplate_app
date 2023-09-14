@@ -102,10 +102,10 @@ packages:
     dependency: transitive
     description:
       name: arna_web_service
-      sha256: eadf4caefc01444d6ad843e245245d54fa1d629a81b8f93fc1f1f0a0d45f4936
+      sha256: "6d7aa0ce4296da2ba2b10edfaaa3961184ecf8ccfb816396b6027f34643d7f48"
       url: "https://pub.dev"
     source: hosted
-    version: "1.8.0"
+    version: "2.0.0"
   async:
     dependency: transitive
     description:
@@ -354,6 +354,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.8"
+  dio:
+    dependency: transitive
+    description:
+      name: dio
+      sha256: ce75a1b40947fea0a0e16ce73337122a86762e38b982e1ccb909daa3b9bc4197
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.3.2"
   fake_async:
     dependency: transitive
     description:
@@ -842,10 +850,10 @@ packages:
     dependency: "direct dev"
     description:
       name: riverpod_lint
-      sha256: "74123a5f0a8e809ab80078dbc02061ecf02e09647a2c3231c87b7342bcf8d399"
+      sha256: ac720622fde22356eca69a4831c15ab811615bf256a2ce37f1fff06b7f86cacf
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.4"
+    version: "2.1.0"
   rxdart:
     dependency: transitive
     description:

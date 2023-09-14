@@ -1,3 +1,8 @@
+## 2.2.0
+
+- Upgrade arna_web_service
+- Bump dependencies
+
 ## 2.1.0
 
 - Add riverpod

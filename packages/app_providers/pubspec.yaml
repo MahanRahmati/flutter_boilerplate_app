@@ -24,4 +24,4 @@ dev_dependencies:
   riverpod_generator: ^2.3.2
   build_runner: ^2.4.6
   custom_lint: ^0.5.3
-  riverpod_lint: ^2.0.4
+  riverpod_lint: ^2.1.0

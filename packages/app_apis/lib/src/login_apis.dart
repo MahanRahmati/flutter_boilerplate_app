@@ -10,7 +10,7 @@ class LoginAPIController extends ArnaWebServiceController {
     required final void Function(dynamic e) errorHandler,
   }) async {
     try {
-      final Response? response = await webService.post(
+      final Response<dynamic>? response = await webService.post(
         Uri.parse(Endpoints.login),
         headers: <String, String>{
           'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ class LoginAPIController extends ArnaWebServiceController {
     required final void Function(dynamic e) errorHandler,
   }) async {
     try {
-      final Response? response = await webService.get(
+      final Response<dynamic>? response = await webService.get(
         Uri.parse(Endpoints.login),
       );
 
