@@ -1,3 +1,7 @@
+global_options:
+  freezed:
+    runs_before:
+      - riverpod_generator
 targets:
   $default:
     builders:
