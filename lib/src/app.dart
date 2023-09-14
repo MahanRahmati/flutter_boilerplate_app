@@ -14,7 +14,7 @@ class App extends ConsumerWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: Strings.appName,
-      locale: TranslationProvider.of(context).flutterLocale,
+      locale: ref.watch(appLanguageProvider).value?.flutterLocale,
       localizationsDelegates: GlobalMaterialLocalizations.delegates,
       supportedLocales: AppLocaleUtils.supportedLocales,
       theme: AppTheme.lightTheme,

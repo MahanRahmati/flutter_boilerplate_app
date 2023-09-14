@@ -1,8 +1,10 @@
 {
   "hello": "Hallo $name",
-  "save": "Speichern",
-  "login": {
-    "success": "Login erfolgreich",
-    "fail": "Login fehlgeschlagen"
+  "language": "Sprache",
+  "theme": {
+    "theme": "Thema",
+    "system": "System",
+    "dark": "Dunkel",
+    "light": "Hell"
   }
 }

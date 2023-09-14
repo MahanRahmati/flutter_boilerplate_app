@@ -14,6 +14,9 @@ dependencies:
   flutter_riverpod: ^2.4.0
   riverpod_annotation: ^2.1.5
 
+  app_localizations:
+    path: ../app_localizations
+
   service_storage:
     path: ../service_storage
 
