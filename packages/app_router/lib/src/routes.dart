@@ -6,6 +6,16 @@ import 'package:screen_splash/screen_splash.dart';
 import 'routes_name.dart';
 import 'routes_path.dart';
 
+/// Routes class defines the router for the application.
+///
+/// The router is created using the GoRouter package and contains
+/// the defined routes for the app.
+///
+/// The routes use the route names from [RoutesName] and paths
+/// from [RoutesPath] for consistency.
+///
+/// The builder for each route returns the screen widget to display
+/// for that route.
 class Routes {
   Routes._();
 
