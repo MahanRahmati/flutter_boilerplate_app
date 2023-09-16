@@ -3,7 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:screen_home/screen_home.dart';
 import 'package:screen_splash/screen_splash.dart';
 
-import 'route_path.dart';
+import 'routes_name.dart';
+import 'routes_path.dart';
 
 class Routes {
   Routes._();
@@ -11,13 +12,15 @@ class Routes {
   static final GoRouter router = GoRouter(
     routes: <GoRoute>[
       GoRoute(
-        path: RoutePath.splash,
+        path: RoutesPath.splash,
+        name: RoutesName.splash,
         builder: (final BuildContext context, final GoRouterState state) {
           return const SplashScreen();
         },
       ),
       GoRoute(
-        path: RoutePath.home,
+        path: RoutesPath.home,
+        name: RoutesName.home,
         builder: (final BuildContext context, final GoRouterState state) {
           return const HomeScreen();
         },

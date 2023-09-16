@@ -1,5 +1,5 @@
-class RoutePath {
-  RoutePath._();
+class RoutesPath {
+  RoutesPath._();
 
   static const String splash = '/';
   static const String home = '/home';
