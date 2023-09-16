@@ -76,5 +76,4 @@ Documentation
 [ ] app_widgets
 [ ] screen_home
 [ ] screen_splash
-[ ] service_native_splash
 [ ] service_storage
