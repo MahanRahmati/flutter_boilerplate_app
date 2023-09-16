@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _goToHomeScreen() {
     Future<void>.delayed(const Duration(seconds: 1)).then(
-      (final _) => context.pushReplacementNamed(RouteNames.home),
+      (final _) => context.pushReplacementNamed(RoutesName.home),
     );
   }
 
