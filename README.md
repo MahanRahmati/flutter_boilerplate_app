@@ -44,6 +44,20 @@ The project structure is organized into several directories:
 
 ## Special
 
+### gitignore
+
+Remove the following lines from .gitignore:
+
+```
+/android/
+/ios/
+/linux/
+/macos/
+/web/
+/windows/
+.metadata
+```
+
 ### freezed
 
 To run the code generator, execute the following command: `dart run build_runner build`
@@ -66,7 +80,8 @@ Contributions are welcome! If you find a bug or want to add a new feature, pleas
 
 ## TODO
 
-Documentation
+### Documentation:
+
 [ ] main
 [ ] app_apis
 [ ] app_constants
