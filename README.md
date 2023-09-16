@@ -82,13 +82,13 @@ Contributions are welcome! If you find a bug or want to add a new feature, pleas
 
 ### Documentation:
 
-[ ] main
-[ ] app_apis
-[ ] app_constants
-[ ] app_localizations
-[ ] app_models
-[ ] app_providers
-[ ] app_widgets
-[ ] screen_home
-[ ] screen_splash
-[ ] service_storage
+- [ ] main
+- [ ] app_apis
+- [ ] app_constants
+- [ ] app_localizations
+- [ ] app_models
+- [ ] app_providers
+- [ ] app_widgets
+- [ ] screen_home
+- [ ] screen_splash
+- [ ] service_storage
