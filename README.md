@@ -88,7 +88,6 @@ Contributions are welcome! If you find a bug or want to add a new feature, pleas
 
 ### Documentation:
 
-- [ ] main
 - [ ] app_apis
 - [ ] app_constants
 - [ ] app_localizations
@@ -96,5 +95,4 @@ Contributions are welcome! If you find a bug or want to add a new feature, pleas
 - [ ] app_providers
 - [ ] app_widgets
 - [ ] screen_home
-- [ ] screen_splash
 - [ ] service_storage
