@@ -65,6 +65,8 @@ dev_dependencies:
   custom_lint: ^0.5.3
   riverpod_lint: ^2.1.0
 
+scripts: derry.yaml
+
 flutter:
   uses-material-design: true
   generate: true

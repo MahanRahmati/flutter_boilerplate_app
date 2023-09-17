@@ -32,6 +32,7 @@ This boilerplate includes several common dependencies that you may find useful w
 | [flutter_native_splash](https://pub.dev/packages/flutter_native_splash/) | Native splash screen                            |
 | [arna_web_service](https://pub.dev/packages/arna_web_service)            | Web service                                     |
 | [slang](https://pub.dev/packages/slang)                                  | Internationalization and Localization           |
+| [derry](https://pub.dev/packages/derry)                                  | Script manager                                  |
 
 You can add or remove dependencies as needed for your specific use case.
 
@@ -58,17 +59,21 @@ Remove the following lines from .gitignore:
 .metadata
 ```
 
-### freezed
+### Models
 
-To run the code generator, execute the following command: `dart run build_runner build`
+To run the code generator, execute the following command: `derry models`
 
-### flutter_native_splash
+### Native Splash
 
-To create splash, execute the following command: `dart run flutter_native_splash:create`
+To create splash, execute the following command: `derry native_splash`
 
-### slang
+### Localization
 
-To generate dart files: `dart run slang`
+To generate localization files: `derry slang`
+
+### Providers
+
+To generate provider files: `derry providers`
 
 ## License
 
