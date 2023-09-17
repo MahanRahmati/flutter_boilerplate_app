@@ -9,6 +9,24 @@ import 'package:service_storage/service_storage.dart';
 
 import '/src/app.dart';
 
+/// The main() method runs when the app starts. It initializes and runs the app.
+///
+/// This method:
+///
+/// 1. Calls runZonedGuarded to catch errors and log them.
+///
+/// 2. Initializes the widget bindings.
+///
+/// 3. Initializes the native splash screen.
+///
+/// 4. Sets the preferred device orientations.
+///
+/// 5. Initializes the local storage.
+///
+/// 6. Starts the app by running the App widget.
+///
+/// The runZonedGuarded callback logs any errors during startup to help
+/// debug crashes.
 Future<void> main() async {
   return runZonedGuarded(() async {
     final WidgetsBinding widgetsBinding =
