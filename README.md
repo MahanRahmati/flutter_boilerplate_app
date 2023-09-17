@@ -22,6 +22,7 @@ This boilerplate includes several common dependencies that you may find useful w
 | :----------------------------------------------------------------------- | :---------------------------------------------- |
 | [riverpod](https://pub.dev/packages/riverpod/)                           | State Manager                                   |
 | [go_router](https://pub.dev/packages/go_router/)                         | Routing                                         |
+| [go_router_builder](https://pub.dev/packages/go_router_builder/)         | Routing                                         |
 | [hive](https://pub.dev/packages/hive/)                                   | Storage                                         |
 | [intl](https://pub.dev/packages/intl/)                                   | Internationalization and Localization           |
 | [arna_logger](https://pub.dev/packages/arna_logger/)                     | Logger                                          |

@@ -6,35 +6,62 @@ import 'package:screen_splash/screen_splash.dart';
 import 'routes_name.dart';
 import 'routes_path.dart';
 
+part 'routes.g.dart';
+
 /// Routes class defines the router for the application.
 ///
 /// The router is created using the GoRouter package and contains
 /// the defined routes for the app.
-///
-/// The routes use the route names from [RoutesName] and paths
-/// from [RoutesPath] for consistency.
-///
-/// The builder for each route returns the screen widget to display
-/// for that route.
 class Routes {
   Routes._();
 
   static final GoRouter router = GoRouter(
-    routes: <GoRoute>[
-      GoRoute(
-        path: RoutesPath.splash,
-        name: RoutesName.splash,
-        builder: (final BuildContext context, final GoRouterState state) {
-          return const SplashScreen();
-        },
-      ),
-      GoRoute(
-        path: RoutesPath.home,
-        name: RoutesName.home,
-        builder: (final BuildContext context, final GoRouterState state) {
-          return const HomeScreen();
-        },
-      ),
-    ],
+    routes: $appRoutes,
   );
+}
+
+/// SplashRoute defines the route for displaying the splash screen.
+///
+/// This class extends [GoRouteData] to create a typed route definition.
+///
+/// The splash screen is displayed when the app is first launched while
+/// it initializes and determines which screen to navigate to next.
+///
+/// The [build] method returns a [SplashScreen] widget to display.
+///
+/// This route does not take any parameters.
+@TypedGoRoute<SplashRoute>(
+  path: RoutesPath.splash,
+  name: RoutesName.splash,
+)
+class SplashRoute extends GoRouteData {
+  const SplashRoute();
+
+  @override
+  Widget build(final BuildContext context, final GoRouterState state) {
+    return const SplashScreen();
+  }
+}
+
+/// HomeRoute defines the route to the main home screen.
+///
+/// This class extends [GoRouteData] to create a typed route definition.
+///
+/// The home screen is the main screen displayed after the splash screen.
+/// It is the central screen that users will interact with most.
+///
+/// The [build] method returns the [HomeScreen] widget to display.
+///
+/// This route does not take any parameters.
+@TypedGoRoute<HomeRoute>(
+  path: RoutesPath.home,
+  name: RoutesName.home,
+)
+class HomeRoute extends GoRouteData {
+  const HomeRoute();
+
+  @override
+  Widget build(final BuildContext context, final GoRouterState state) {
+    return const HomeScreen();
+  }
 }
