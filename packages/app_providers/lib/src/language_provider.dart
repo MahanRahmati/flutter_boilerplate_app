@@ -4,6 +4,19 @@ import 'package:service_storage/service_storage.dart';
 
 part 'language_provider.g.dart';
 
+/// AppLanguage manages the selected application language.
+///
+/// It extends [_$AppLanguage] which is the generated Riverpod class.
+///
+/// The [build] method returns the current [AppLocale] by:
+///
+/// - Getting the persisted language code from local storage
+/// - Parsing into an [AppLocale] using [AppLocaleUtils]
+///
+/// [setLocale] saves the provided [AppLocale] to local storage and updates
+/// the state.
+///
+/// This uses the Hive plugin for local storage.
 @riverpod
 class AppLanguage extends _$AppLanguage {
   static const String _storageName = 'language';

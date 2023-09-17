@@ -4,6 +4,19 @@ import 'package:service_storage/service_storage.dart';
 
 part 'theme_mode_provider.g.dart';
 
+/// AppThemeMode manages the application theme mode state.
+///
+/// It extends [_$AppThemeMode] which is the generated Riverpod class.
+///
+/// The [build] method returns the current [ThemeMode] by:
+///
+/// - Getting the persisted theme mode from local storage
+/// - Mapping the stored bool to a [ThemeMode]
+///
+/// [setThemeMode] saves the given [ThemeMode] to local storage and updates
+/// the state. It maps [ThemeMode] to a bool for storage.
+///
+/// This uses the Hive plugin for local storage.
 @riverpod
 class AppThemeMode extends _$AppThemeMode {
   static const String _storageName = 'theme';

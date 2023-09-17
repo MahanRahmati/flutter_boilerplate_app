@@ -92,7 +92,6 @@ Contributions are welcome! If you find a bug or want to add a new feature, pleas
 - [ ] app_constants
 - [ ] app_localizations
 - [ ] app_models
-- [ ] app_providers
 - [ ] app_widgets
 - [ ] screen_home
 - [ ] service_storage
