@@ -16,3 +16,6 @@ models:
 
 providers:
   - cd packages/app_providers/ && dart run build_runner build --delete-conflicting-outputs
+
+router:
+  - cd packages/app_router/ && dart run build_runner build --delete-conflicting-outputs

@@ -62,19 +62,23 @@ Remove the following lines from .gitignore:
 
 ### Models
 
-To run the code generator, execute the following command: `derry models`
+To generate model files, execute the following command: `derry models`
 
 ### Native Splash
 
-To create splash, execute the following command: `derry native_splash`
+To create native splash screen, execute the following command: `derry native_splash`
 
 ### Localization
 
-To generate localization files: `derry slang`
+To generate localization files, execute the following command: `derry slang`
 
 ### Providers
 
-To generate provider files: `derry providers`
+To generate provider files, execute the following command: `derry providers`
+
+### Router
+
+To generate router files, execute the following command: `derry router`
 
 ## License
 
