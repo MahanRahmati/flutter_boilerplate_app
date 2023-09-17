@@ -8,7 +8,17 @@ part of 'translation_provider.dart';
 
 String _$translationHash() => r'8f437354a1708844b93a552276f4c1ae6b3c206c';
 
-/// See also [translation].
+/// translation returns the translated strings for the current app locale.
+///
+/// It takes a [TranslationRef] which provides access to providers.
+///
+/// It gets the current [AppLocale] from [appLanguageProvider].
+///
+/// If no locale is set, it defaults to English.
+///
+/// It returns the localized [StringsEn] for the locale.
+///
+/// Copied from [translation].
 @ProviderFor(translation)
 final translationProvider = AutoDisposeProvider<StringsEn>.internal(
   translation,

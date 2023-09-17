@@ -8,7 +8,21 @@ part of 'language_provider.dart';
 
 String _$appLanguageHash() => r'bf79f247003e9ffe0cf0855a05fad3cf05a2e6a9';
 
-/// See also [AppLanguage].
+/// AppLanguage manages the selected application language.
+///
+/// It extends [_$AppLanguage] which is the generated Riverpod class.
+///
+/// The [build] method returns the current [AppLocale] by:
+///
+/// - Getting the persisted language code from local storage
+/// - Parsing into an [AppLocale] using [AppLocaleUtils]
+///
+/// [setLocale] saves the provided [AppLocale] to local storage and updates
+/// the state.
+///
+/// This uses the Hive plugin for local storage.
+///
+/// Copied from [AppLanguage].
 @ProviderFor(AppLanguage)
 final appLanguageProvider =
     AutoDisposeAsyncNotifierProvider<AppLanguage, AppLocale>.internal(
