@@ -22,6 +22,16 @@ class HomeScreenNavigationBar extends StatelessWidget {
           label: 'Home',
         ),
         NavigationDestination(
+          selectedIcon: Icon(Icons.search),
+          icon: Icon(Icons.search_outlined),
+          label: 'Search',
+        ),
+        NavigationDestination(
+          selectedIcon: Icon(Icons.calendar_today),
+          icon: Icon(Icons.calendar_today_outlined),
+          label: 'Calendar',
+        ),
+        NavigationDestination(
           selectedIcon: Icon(Icons.settings),
           icon: Icon(Icons.settings_outlined),
           label: 'Settings',

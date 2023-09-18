@@ -20,6 +20,10 @@ class SettingsPage extends ConsumerWidget {
     final AsyncValue<AppLocale> appLocale = ref.watch(appLanguageProvider);
     final StringsEn t = ref.watch(translationProvider);
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Settings'),
+        centerTitle: true,
+      ),
       body: ListView(
         children: <Widget>[
           ListTile(title: Text(t.theme.theme)),

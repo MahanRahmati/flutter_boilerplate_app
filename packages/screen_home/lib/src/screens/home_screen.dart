@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '/src/screens/calendar_page.dart';
 import '/src/screens/home_page.dart';
+import '/src/screens/search_page.dart';
 import '/src/screens/settings_page.dart';
 import '/src/widgets/home_screen_navigation_bar.dart';
 
@@ -44,6 +46,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         physics: const NeverScrollableScrollPhysics(),
         children: const <Widget>[
           HomePage(),
+          SearchPage(),
+          CalendarPage(),
           SettingsPage(),
         ],
       ),
