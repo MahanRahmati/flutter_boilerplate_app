@@ -21,13 +21,19 @@ part 'theme_mode_provider.g.dart';
 class AppThemeMode extends _$AppThemeMode {
   static const String _storageName = 'theme';
   static const String _storageKey = 'themeKey';
+  static const bool? _defaultValue = null;
 
   @override
   Future<ThemeMode> build() async {
     final bool? themeMode = await HiveStorageService.instance?.getValue<bool?>(
-      _storageKey,
-      storageName: _storageName,
-    );
+          _storageKey,
+          storageName: _storageName,
+        ) ??
+        _defaultValue;
+    return getThemeMode(themeMode);
+  }
+
+  ThemeMode getThemeMode(final bool? themeMode) {
     switch (themeMode) {
       case true:
         return ThemeMode.dark;
