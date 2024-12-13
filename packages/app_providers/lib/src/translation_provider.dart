@@ -1,7 +1,8 @@
 import 'package:app_localizations/app_localizations.dart';
-import 'package:app_providers/app_providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import 'language_provider.dart';
 
 part 'translation_provider.g.dart';
 
