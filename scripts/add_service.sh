@@ -2,9 +2,9 @@
 
 # Check if service name argument provided
 if [ -z "$1" ]; then
-	echo "Error: service name not provided"
-	echo "Usage: $0 <service_name>"
-	exit 1
+  echo "Error: service name not provided"
+  echo "Usage: $0 <service_name>"
+  exit 1
 fi
 
 SERVICE_NAME=$1
@@ -12,8 +12,8 @@ SERVICE_PATH="packages/service_$SERVICE_NAME"
 
 # Check if service already exists
 if [ -d "$SERVICE_PATH" ]; then
-	echo "Error: Service $SERVICE_NAME already exists"
-	exit 1
+  echo "Error: Service $SERVICE_NAME already exists"
+  exit 1
 fi
 
 # Create service folder and files
@@ -27,7 +27,9 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.1 <4.0.0'
+  sdk: ^3.6.0
+
+resolution: workspace
 
 dependencies:
   flutter:
@@ -36,7 +38,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.3
+  flutter_lints: ^5.0.0
 EOL
 
 cat <<EOL >"$SERVICE_PATH/analysis_options.yaml"

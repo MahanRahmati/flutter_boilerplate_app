@@ -5,67 +5,47 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.1 <4.0.0'
+  sdk: ^3.6.0
+
+workspace:
+  - packages/app_apis
+  - packages/app_constants
+  - packages/app_localizations
+  - packages/app_models
+  - packages/app_providers
+  - packages/app_router
+  - packages/app_widgets
+  - packages/service_native_splash
+  - packages/service_orientations
+  - packages/service_storage
 
 dependencies:
   flutter:
     sdk: flutter
 
   # State manager
-  flutter_riverpod: ^2.4.0
-  riverpod_annotation: ^2.1.5
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
 
   # Internationalization and localization
   flutter_localizations:
     sdk: flutter
-  intl: ^0.18.1
+  intl: ^0.19.0
 
   # Logger
   arna_logger: ^1.1.0
 
-  app_apis:
-    path: packages/app_apis
-
-  app_constants:
-    path: packages/app_constants
-
-  app_localizations:
-    path: packages/app_localizations
-
-  app_models:
-    path: packages/app_models
-
-  app_providers:
-    path: packages/app_providers
-
-  app_router:
-    path: packages/app_router
-
-  app_widgets:
-    path: packages/app_widgets
-
-  service_native_splash:
-    path: packages/service_native_splash
-
-  service_orientations:
-    path: packages/service_orientations
-
-  service_storage:
-    path: packages/service_storage
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.3
+  flutter_lints: ^5.0.0
 
-  build_runner: ^2.4.6
-  freezed: ^2.4.2
-  json_serializable: ^6.7.1
-  riverpod_generator: ^2.3.2
-  custom_lint: ^0.5.3
-  riverpod_lint: ^2.1.0
-
-scripts: derry.yaml
+  build_runner: ^2.4.13
+  freezed: ^2.5.7
+  json_serializable: ^6.9.0
+  riverpod_generator: ^2.6.3
+  custom_lint: ^0.7.0
+  riverpod_lint: ^2.6.3
 
 flutter:
   uses-material-design: true

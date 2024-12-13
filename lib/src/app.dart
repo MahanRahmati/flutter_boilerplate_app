@@ -35,12 +35,12 @@ class App extends ConsumerWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: Strings.appName,
-      locale: ref.watch(appLanguageProvider).value?.flutterLocale,
+      locale: ref.watch(appLanguageProvider).valueOrNull?.flutterLocale,
       localizationsDelegates: GlobalMaterialLocalizations.delegates,
       supportedLocales: AppLocaleUtils.supportedLocales,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ref.watch(appThemeModeProvider).value,
+      themeMode: ref.watch(appThemeModeProvider).valueOrNull,
       routerConfig: Routes.router,
     );
   }

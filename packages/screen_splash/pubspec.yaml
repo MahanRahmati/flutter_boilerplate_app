@@ -5,22 +5,22 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.1 <4.0.0'
+  sdk: ^3.6.0
+
+resolution: workspace
 
 dependencies:
   flutter:
     sdk: flutter
 
-  app_router:
-    path: ../app_router
+  app_router: ^1.0.0+1
 
-  service_native_splash:
-    path: ../service_native_splash
+  service_native_splash: ^1.0.0+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.3
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true

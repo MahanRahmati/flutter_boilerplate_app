@@ -18,7 +18,7 @@ class SettingsPage extends ConsumerWidget {
   Widget build(final BuildContext context, final WidgetRef ref) {
     final AsyncValue<ThemeMode> themeMode = ref.watch(appThemeModeProvider);
     final AsyncValue<AppLocale> appLocale = ref.watch(appLanguageProvider);
-    final StringsEn t = ref.watch(translationProvider);
+    final Translations t = ref.watch(translationProvider);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Settings'),

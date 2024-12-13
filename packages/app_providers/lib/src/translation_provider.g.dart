@@ -6,21 +6,19 @@ part of 'translation_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$translationHash() => r'8f437354a1708844b93a552276f4c1ae6b3c206c';
+String _$translationHash() => r'3da0959cbbedc63020907858d1330c8af613cf4d';
 
 /// translation returns the translated strings for the current app locale.
-///
-/// It takes a [TranslationRef] which provides access to providers.
 ///
 /// It gets the current [AppLocale] from [appLanguageProvider].
 ///
 /// If no locale is set, it defaults to English.
 ///
-/// It returns the localized [StringsEn] for the locale.
+/// It returns the localized [Translations] for the locale.
 ///
 /// Copied from [translation].
 @ProviderFor(translation)
-final translationProvider = AutoDisposeProvider<StringsEn>.internal(
+final translationProvider = AutoDisposeProvider<Translations>.internal(
   translation,
   name: r'translationProvider',
   debugGetCreateSourceHash:
@@ -29,6 +27,8 @@ final translationProvider = AutoDisposeProvider<StringsEn>.internal(
   allTransitiveDependencies: null,
 );
 
-typedef TranslationRef = AutoDisposeProviderRef<StringsEn>;
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef TranslationRef = AutoDisposeProviderRef<Translations>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

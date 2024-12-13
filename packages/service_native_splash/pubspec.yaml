@@ -5,16 +5,18 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.1 <4.0.0'
+  sdk: ^3.6.0
+
+resolution: workspace
 
 dependencies:
   flutter:
     sdk: flutter
 
   # Native splash screen
-  flutter_native_splash: ^2.3.2
+  flutter_native_splash: ^2.4.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.3
+  flutter_lints: ^5.0.0
