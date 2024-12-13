@@ -15,6 +15,8 @@
 /// translations, etc.
 library app_providers;
 
+export 'package:flutter_riverpod/flutter_riverpod.dart';
+
 export 'src/language_provider.dart';
 export 'src/theme_mode_provider.dart';
 export 'src/translation_provider.dart';
