@@ -21,6 +21,7 @@ part 'language_provider.g.dart';
 class AppLanguage extends _$AppLanguage {
   static const String _storageName = 'language';
   static const String _storageKey = 'languageKey';
+  static const String _defaultValue = 'en';
 
   @override
   Future<AppLocale> build() async {
@@ -29,7 +30,7 @@ class AppLanguage extends _$AppLanguage {
       _storageKey,
       storageName: _storageName,
     );
-    return AppLocaleUtils.parseLocaleParts(languageCode: language ?? 'en');
+    return getLocale(language);
   }
 
   Future<void> setLocale(final AppLocale appLocale) async {
@@ -39,5 +40,11 @@ class AppLanguage extends _$AppLanguage {
       storageName: _storageName,
     );
     state = AsyncData<AppLocale>(appLocale);
+  }
+
+  AppLocale getLocale(final String? language) {
+    return AppLocaleUtils.parseLocaleParts(
+      languageCode: language ?? _defaultValue,
+    );
   }
 }

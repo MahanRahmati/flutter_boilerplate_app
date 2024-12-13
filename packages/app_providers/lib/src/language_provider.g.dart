@@ -6,7 +6,7 @@ part of 'language_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$appLanguageHash() => r'bf79f247003e9ffe0cf0855a05fad3cf05a2e6a9';
+String _$appLanguageHash() => r'690f6642efa74b81026327a1e97414a2473b4fa2';
 
 /// AppLanguage manages the selected application language.
 ///
