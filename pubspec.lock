@@ -55,7 +55,7 @@ packages:
     source: hosted
     version: "2.6.0"
   arna_logger:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: arna_logger
       sha256: bd8ba1c6520852844193684e2c0f9d9c2905eb552770700d8dc55fd79845558a
