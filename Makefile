@@ -11,7 +11,7 @@ native_splash:
 native_splash_remove:
 	dart run flutter_native_splash:remove
 
-slang:
+localizations:
 	cd packages/app_localizations/ && dart run slang
 
 models:
