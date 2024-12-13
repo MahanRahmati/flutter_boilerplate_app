@@ -35,8 +35,8 @@ class App extends ConsumerWidget {
       locale: ref.watch(appLanguageProvider).valueOrNull?.flutterLocale,
       localizationsDelegates: GlobalMaterialLocalizations.delegates,
       supportedLocales: AppLocaleUtils.supportedLocales,
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
+      theme: AppTheme.lightTheme(),
+      darkTheme: AppTheme.darkTheme(),
       themeMode: ref.watch(appThemeModeProvider).valueOrNull,
       routerConfig: Routes.router,
     );
