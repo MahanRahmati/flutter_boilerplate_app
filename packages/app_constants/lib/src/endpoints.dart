@@ -1,4 +1,4 @@
-import '../app_constants.dart';
+import 'environments.dart';
 
 class Endpoints {
   Endpoints._();

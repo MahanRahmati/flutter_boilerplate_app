@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
-  static ThemeData get lightTheme {
+  static ThemeData lightTheme() {
     return ThemeData(
+      brightness: Brightness.light,
       useMaterial3: true,
       colorSchemeSeed: AppColors.blue,
-      brightness: Brightness.light,
     );
   }
 
-  static ThemeData get darkTheme {
+  static ThemeData darkTheme() {
     return ThemeData(
       brightness: Brightness.dark,
       useMaterial3: true,
