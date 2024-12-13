@@ -4,11 +4,8 @@ import 'package:app_providers/app_providers.dart';
 import 'package:app_router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /// App is the root widget of the application.
-///
-/// It extends [ConsumerWidget] to access the app's providers.
 ///
 /// The [build] method returns a [MaterialApp.router] configured with:
 ///
