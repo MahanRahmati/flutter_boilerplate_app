@@ -4,9 +4,6 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 /// NativeSplash class handles initializing and removing the native splash
 /// screen.
 ///
-/// This is a singleton class with a private constructor.
-/// The static [instance] field provides access to the singleton instance.
-///
 /// The [init] method initializes the native splash screen by calling
 /// [FlutterNativeSplash.preserve] and passing the [widgetsBinding].
 /// This will keep the native splash screen visible until removed.
@@ -17,12 +14,18 @@ class NativeSplash {
   NativeSplash._();
 
   static final NativeSplash instance = NativeSplash._();
+  bool _initialized = false;
 
+  /// Initializes the native splash screen.
   Future<void> init(final WidgetsBinding widgetsBinding) async {
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+    _initialized = true;
   }
 
+  /// Removes the native splash screen.
   void remove() {
-    FlutterNativeSplash.remove();
+    if (_initialized) {
+      FlutterNativeSplash.remove();
+    }
   }
 }

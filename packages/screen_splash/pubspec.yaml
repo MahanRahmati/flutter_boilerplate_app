@@ -1,8 +1,8 @@
 name: screen_splash
 description: A new Flutter project.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.0
 
 environment:
   sdk: ^3.6.0
@@ -15,7 +15,7 @@ dependencies:
 
   app_router: ^1.0.0+1
 
-  service_native_splash: ^1.0.0+1
+  service_native_splash: ^1.0.0
 
 dev_dependencies:
   flutter_test:

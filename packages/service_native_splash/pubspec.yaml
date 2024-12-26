@@ -1,8 +1,8 @@
 name: service_native_splash
-description: A new Flutter project.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+description: Defines the native splash screen services.
+publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.0
 
 environment:
   sdk: ^3.6.0
@@ -13,7 +13,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Native splash screen
   flutter_native_splash: ^2.4.3
 
 dev_dependencies:

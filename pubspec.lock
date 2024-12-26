@@ -895,7 +895,7 @@ packages:
       path: "packages/screen_splash"
       relative: true
     source: path
-    version: "1.0.0+1"
+    version: "1.0.0"
   shelf:
     dependency: transitive
     description:
